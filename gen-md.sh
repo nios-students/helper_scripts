@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # Base directory
-base_dir="NEP2020/*/"
+base_dir="NEP2020"
 
-# Loop through each folder in NEP/2024/
-for folder in "$base_dir"/*/; do
+for upper_folder in "$base_dir"/*; do
+    # Loop through each folder in NEP2020/
+for folder in "$upper_folder"/*; do
     # Check if it's a directory
     if [ -d "$folder" ]; then
         echo "Processing folder: $folder"
@@ -24,18 +25,18 @@ for folder in "$base_dir"/*/; do
                 bash ../../../../helper-scripts/gen-solved.sh
 
                 # Output lab.md
-                echo "Outputting lab.md"
+                echo "Outputting $(pwd)/lab.md"
                 # Assuming you want to create or modify lab.md here
                 # (Add your output command here if needed)
                 cat lab.md
 
                 # Output assignment.md
-                echo "Outputting assignment.md"
+                echo "Outputting $(pwd)/assignment.md"
                 # (Add your output command here if needed)
                 cat assignment.md
 
                 # Output solved.md
-                echo "Outputting solved.md"
+                echo "Outputting $(pwd)/solved.md"
                 # (Add your output command here if needed)
                 cat solved.md
 
@@ -43,5 +44,8 @@ for folder in "$base_dir"/*/; do
                 cd - || exit
             fi
         done
+    else
+        echo "Skipping non-directory: $folder"
     fi
+done
 done
