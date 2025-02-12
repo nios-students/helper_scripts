@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Base directory
-base_dir="NEP2020/2024"
+base_dir="NEP2020/*/"
 
 # Loop through each folder in NEP/2024/
 for folder in "$base_dir"/*/; do
