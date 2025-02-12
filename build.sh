@@ -4,6 +4,9 @@
 
 # Assume we're already in cf pages which lands us in docs folder
 
+# cleanup
+rm -rf helper-scripts/ NEP*/ contribute.md takedown.md typography.md || true 
+
 # Clone sources
 git clone https://github.com/examdawn/helper_scripts/ helper-scripts --depth=1 # Scripts
 git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BCA --depth=1 # Clone BCA
