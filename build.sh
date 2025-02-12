@@ -9,7 +9,7 @@ rm -rf helper-scripts/ NEP*/ contribute.md takedown.md typography.md ../node_mod
 
 # Clone sources
 git clone https://github.com/examdawn/helper_scripts/ helper-scripts --depth=1 # Scripts
-git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BCA --depth=1 # Clone BCA
+git clone https://github.com/examdawn/NEP2020_2023_BCA NEP2020/2023/BCA --depth=1 # Clone BCA
 
 #git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BSc-Math --depth=1
 #git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BSc-Physics --depth=1
