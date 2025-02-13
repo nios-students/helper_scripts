@@ -3,31 +3,25 @@
   Cross-Origin-Embedder-Policy: require-corp
 
 /*.png
-  ! Content-Security-Policy
-  ! Cross-Origin-Embedder-Policy
-  ! Cross-Origin-Opener-Policy
+  Cross-Origin-Opener-Policy: none
+  Cross-Origin-Embedder-Policy: unsafe-none
 
 /*.jpg
-  ! Content-Security-Policy
-  ! Cross-Origin-Embedder-Policy
-  ! Cross-Origin-Opener-Policy
+  Cross-Origin-Opener-Policy: none
+  Cross-Origin-Embedder-Policy: unsafe-none
 
 /*.svg
-  ! Content-Security-Policy
-  ! Cross-Origin-Embedder-Policy
-  ! Cross-Origin-Opener-Policy
+  Cross-Origin-Opener-Policy: none
+  Cross-Origin-Embedder-Policy: unsafe-none
 
 /*.PNG
-  ! Content-Security-Policy
-  ! Cross-Origin-Embedder-Policy
-  ! Cross-Origin-Opener-Policy
+  Cross-Origin-Opener-Policy: none
+  Cross-Origin-Embedder-Policy: unsafe-none
 
 /*.JPG
-  ! Content-Security-Policy
-  ! Cross-Origin-Embedder-Policy
-  ! Cross-Origin-Opener-Policy
+  Cross-Origin-Opener-Policy: none
+  Cross-Origin-Embedder-Policy: unsafe-none
 
 /*.SVG
-  ! Content-Security-Policy
-  ! Cross-Origin-Embedder-Policy
-  ! Cross-Origin-Opener-Policy
+  Cross-Origin-Opener-Policy: none
+  Cross-Origin-Embedder-Policy: unsafe-none
