@@ -3,25 +3,8 @@
   Cross-Origin-Embedder-Policy: require-corp
 
 /*.png
-  Cross-Origin-Opener-Policy: none
-  Cross-Origin-Embedder-Policy: unsafe-none
-
 /*.jpg
-  Cross-Origin-Opener-Policy: none
-  Cross-Origin-Embedder-Policy: unsafe-none
-
 /*.svg
   Cross-Origin-Opener-Policy: none
   Cross-Origin-Embedder-Policy: unsafe-none
-
-/*.PNG
-  Cross-Origin-Opener-Policy: none
-  Cross-Origin-Embedder-Policy: unsafe-none
-
-/*.JPG
-  Cross-Origin-Opener-Policy: none
-  Cross-Origin-Embedder-Policy: unsafe-none
-
-/*.SVG
-  Cross-Origin-Opener-Policy: none
-  Cross-Origin-Embedder-Policy: unsafe-none
+  Access-Control-Allow-Origin: *
