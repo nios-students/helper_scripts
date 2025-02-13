@@ -44,24 +44,18 @@ We also welcome any positive informative criticism or suggestions if you have an
 - [Souhrud Reddy](https://sounddrill31.github.io) for working on XML sidebar loading through [XML2JS](https://www.npmjs.com/package/xml2js)(removed now in favor of vitepress sidebar plugin), content sorting scripts, etc 
 ## Contributors
 ### Website Maintainers
-#### Website Maintainer(s)
+#### Lead Website Maintainer(s)
 - [Jack-Pots](https://jack-pots.github.io/)
   - [Primary Git Profile](https://github.com/Jack-Pots)
   - [LinkedIn](https://www.linkedin.com/in/jack-pots/)
-#### Content Maintainer(s)
+#### Lead Content Maintainer(s)
 - [sounddrill](https://sounddrill31.github.io/)
   - [Primary Git Profile](https://github.com/sounddrill31/)
   - [LinkedIn](https://www.linkedin.com/in/souhrud-reddy/)
 
-### Website Contributors
-<a href="https://github.com/examdawn/examdawn.github.io/graphs/contributors">
+### Website Source Contributors
+<a href="https://github.com/examdawn/website/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=examdawn/examdawn.github.io" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
-### Content Contributors
-<a href="https://github.com/examdawn/content/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=examdawn/content" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
