@@ -5,7 +5,7 @@
 # Assume we're already in cf pages which lands us in docs folder
 
 # cleanup
-rm -rf helper-scripts/ NEP*/ contribute.md takedown.md typography.md ../node_modules || true 
+rm -rf helper-scripts/ NEP*/ contribute.md takedown.md typography.md ../node_modules .vitepress/dist || true 
 
 # Clone sources
 git clone https://github.com/examdawn/helper_scripts/ helper-scripts --depth=1 # Scripts
@@ -22,3 +22,4 @@ bash helper-scripts/gen-md.sh # Create all the folders
 cd .. #assume we're starting in docs folder
 npm install
 npm run docs:build # Build, it will pop up in 
+cp docs/helper-scripts/templates/template_headers docs/.vitepress/dist/_headers # Copy headers, https://vitepress-python-editor.netlify.app/installation#_4-set-http-headers
