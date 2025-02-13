@@ -39,6 +39,7 @@ We also welcome any positive informative criticism or suggestions if you have an
 - [Vitepress](https://vitepress.dev/) for the Website Template and markdown handling
 - [markdown-it-mathjax3](https://github.com/tani/markdown-it-mathjax3) for making adding LaTeX support trivial
 - [vitepress-plugin-mermaid](https://emersonbottero.github.io/vitepress-plugin-mermaid/) for making adding Mermaid support trivial
+- [vitepress-python-editor] for making adding a Live Python Editor trivial 
 - [Jack-Pots](https://jack-pots.github.io/) for setting up the website and maintaining the vitepress repo, also helping us add content even during exams 
 - [Souhrud Reddy](https://sounddrill31.github.io) for working on XML sidebar loading through [XML2JS](https://www.npmjs.com/package/xml2js)(removed now in favor of vitepress sidebar plugin), content sorting scripts, etc 
 ## Contributors
