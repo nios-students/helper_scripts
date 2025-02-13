@@ -22,4 +22,4 @@ bash helper-scripts/gen-md.sh # Create all the folders
 cd .. #assume we're starting in docs folder
 npm install
 npm run docs:build # Build, it will pop up in 
-cp docs/helper-scripts/templates/template_headers docs/.vitepress/dist/NEP2020/2023/BCA/4thsem/Python-Programming/lab/_headers # Copy headers, https://vitepress-python-editor.netlify.app/installation#_4-set-http-headers
+cp docs/helper-scripts/templates/template_headers docs/.vitepress/dist/_headers # Copy headers, https://vitepress-python-editor.netlify.app/installation#_4-set-http-headers

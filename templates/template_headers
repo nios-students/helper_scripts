@@ -1,3 +1,33 @@
 /*
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp
+
+/*.png
+  ! Content-Security-Policy
+  ! Cross-Origin-Embedder-Policy
+  ! Cross-Origin-Opener-Policy
+
+/*.jpg
+  ! Content-Security-Policy
+  ! Cross-Origin-Embedder-Policy
+  ! Cross-Origin-Opener-Policy
+
+/*.svg
+  ! Content-Security-Policy
+  ! Cross-Origin-Embedder-Policy
+  ! Cross-Origin-Opener-Policy
+
+/*.PNG
+  ! Content-Security-Policy
+  ! Cross-Origin-Embedder-Policy
+  ! Cross-Origin-Opener-Policy
+
+/*.JPG
+  ! Content-Security-Policy
+  ! Cross-Origin-Embedder-Policy
+  ! Cross-Origin-Opener-Policy
+
+/*.SVG
+  ! Content-Security-Policy
+  ! Cross-Origin-Embedder-Policy
+  ! Cross-Origin-Opener-Policy
