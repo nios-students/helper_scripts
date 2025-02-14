@@ -29,19 +29,26 @@ fi
 for folder in */; do
     # Check for index.md in the subject folder
     if [[ -f "${folder}solved/index.md" ]]; then
-        # Read the first line of index.md
-        first_line=$(head -n 1 "${folder}solved/index.md")
-        
-        # Check if the first line matches the expected format
-        if [[ "$first_line" != "# "* ]]; then
-            # Replace the first line with "# Subject:"
-            echo -e "# Subject:\n$(tail -n +2 "${folder}solved/index.md")" > "${folder}solved/index.md"
+        # Read the content of index.md
+        content=$(cat "${folder}solved/index.md")
+
+        # Check if the content starts with frontmatter
+        if [[ "$(head -n 1 <<< "$content")" == "---" ]]; then
+            # Find the second occurrence of "---"
+            second_occurrence=$(sed -n '2,/---/=' <<< "$content")
+
+            # If a second occurrence is found, skip the frontmatter
+            if [[ -n "$second_occurrence" ]]; then
+                start_line=$((second_occurrence + 1))
+                # Extract content after frontmatter
+                content=$(tail -n "+$start_line" <<< "$content")
+            fi
         fi
-        
+
         # Extract the subject name from the first line of index.md
-        subject_name=$(head -n 1 "${folder}index.md" | sed 's/^# //; s/[[:space:]]*$//')  # Remove leading # and trailing whitespace
+        subject_name=$(sed -n 's/^# //p' "${folder}solved/index.md" | head -n 1 | sed 's/[[:space:]]*$//')  # Remove leading # and trailing whitespace
         echo "Processing ${subject_name}"
-        
+
         # Generate the new entry
         new_entry="- [${subject_name}](${folder}solved/index.md)"
 
