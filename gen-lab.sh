@@ -35,7 +35,7 @@ for folder in */; do
         # Check if the content starts with frontmatter
         if [[ "$(head -n 1 <<< "$content")" == "---" ]]; then
             # Find the second occurrence of "---"
-            second_occurrence=$(sed -n '2,/---/=' <<< "$content")
+            second_occurrence=$(awk '/---/{c++} c==2{print NR; exit}' <<< "$content")
 
             # If a second occurrence is found, skip the frontmatter
             if [[ -n "$second_occurrence" ]]; then
