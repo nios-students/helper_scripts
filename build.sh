@@ -5,7 +5,7 @@
 # Assume we're already in cf pages which lands us in docs folder
 
 # cleanup
-rm -rf helper-scripts/ temp/ wiki/ contribute.md takedown.md typography.md ../node_modules .vitepress/dist || true 
+rm -rf helper-scripts/ temp/ wiki/ home/ contribute.md takedown.md typography.md ../node_modules .vitepress/dist || true 
 
 # Clone sources
 git clone https://github.com/nios-students/helper_scripts/ helper-scripts --depth=1 # Scripts
