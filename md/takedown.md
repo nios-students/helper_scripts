@@ -3,11 +3,11 @@
 
 ### Purpose
 
-Our platform aims to make notes easier to find for students. We understand that some content may be copyrighted, and we apologize in advance if we inadvertently infringe on any copyright. Our goal is to provide a helpful resource for students, not to infringe on anyone's rights.
+Our platform aims to make NIOS resources easier to find for students. We understand that some content may be copyrighted, and we apologize in advance if we inadvertently infringe on any copyright, or worse. Our goal is to provide a helpful resource for students, not to infringe on anyone's rights.
 
 ### How to Submit a Takedown Request
 
-If you believe that any content on our platform infringes on your copyright, please submit a takedown request using the form below. We will review your request and take down the content if necessary.
+If you believe that any content on our platform infringes on your copyright or you have some other complaint, please submit a takedown request using the form below. We will review your request and take down the content if necessary.
 
 ### Takedown Request Form
 
@@ -25,4 +25,4 @@ We will review all takedown requests and verify the ownership of the content. If
 
 If we find that the content infringes on your copyright, we will remove it from our platform. We will also make sure to keep a record of all correspondence and documentation related to the takedown request.
 
-You can do this through a git Pull Request, or a Github Issue to [the content repo](https://github.com/examdawn/content)
+You can do this through a git Pull Request, or a Github Issue to [the content repo](https://github.com/nios-students/docs)
