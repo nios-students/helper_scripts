@@ -10,7 +10,7 @@ fi
 TEMPLATE_FILE="../../../../helper-scripts/templates/temp-assignment.md"
 TMP_FILE=$(mktemp)
 UNIQUE_FILE=$(mktemp)
-FINAL_FILE="exam-preparation.md"
+FINAL_FILE="examprep.md"
 
 # Cleanup function to remove temporary files
 cleanup() {
