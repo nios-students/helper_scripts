@@ -23,6 +23,7 @@ for folder in "$upper_folder"/*; do
                 bash ../../../../helper-scripts/gen-assign.sh
                 bash ../../../../helper-scripts/gen-lab.sh
                 bash ../../../../helper-scripts/gen-solved.sh
+                bash ../../../../helper-scripts/gen-prep.sh
 
                 # Output lab.md
                 echo "Outputting $(pwd)/lab.md"
@@ -39,6 +40,11 @@ for folder in "$upper_folder"/*; do
                 echo "Outputting $(pwd)/solved.md"
                 # (Add your output command here if needed)
                 cat solved.md
+
+                # Output solved.md
+                echo "Outputting $(pwd)/examprep.md"
+                # (Add your output command here if needed)
+                cat examprep.md
 
                 # Return to the previous directory
                 cd - || exit
