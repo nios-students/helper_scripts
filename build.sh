@@ -35,7 +35,7 @@ done
 #git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BSc-Math --depth=1
 #git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BSc-Physics --depth=1
 
-git clone https://github.com/examdawn/helper_scripts
+git clone https://github.com/examdawn/helper_scripts helper-scripts
 mv helper-scripts/md/*.md . # Move the md files to current docs dir
 
 bash helper-scripts/gen-md.sh # Create all the folders
