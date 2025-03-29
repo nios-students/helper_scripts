@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+set -e # Fail on even the smallest error
 
 # curl https://raw.githubusercontent.com/examdawn/helper_scripts/refs/heads/main/build.sh | bash
 
@@ -24,8 +25,8 @@ for repo_name in "${!repos[@]}"; do
     echo "Cloning $repo_name..."
     target_dir="${repo_name//_//}"
     echo "Removing old directory: $target_dir..."
-    rm -rf "$target_dir"
-    git clone ${repos[$repo_name]} --depth=1
+    rm -rf "$target_dir" || true
+    git clone ${repos[$repo_name]} --depth=1 || true
   else
     echo "Skipping $repo_name because it's in SKIP_$repo_name mode"
   fi
@@ -35,12 +36,12 @@ done
 #git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BSc-Math --depth=1
 #git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BSc-Physics --depth=1
 
-git clone https://github.com/examdawn/helper_scripts helper-scripts
-mv helper-scripts/md/*.md . # Move the md files to current docs dir
+git clone https://github.com/examdawn/helper_scripts helper-scripts || true
+mv helper-scripts/md/*.md .  || true # Move the md files to current docs dir
 
-bash helper-scripts/gen-md.sh # Create all the folders
+bash helper-scripts/gen-md.sh || true # Create all the folders
 
 cd .. #assume we're starting in docs folder
-npm install
+npm install || true
 npm run docs:build # Build, it will pop up in 
-cp docs/helper-scripts/templates/template_headers docs/.vitepress/dist/_headers # Copy headers, https://vitepress-python-editor.netlify.app/installation#_4-set-http-headers
+cp docs/helper-scripts/templates/template_headers docs/.vitepress/dist/_headers || true # Copy headers, https://vitepress-python-editor.netlify.app/installation#_4-set-http-headers
