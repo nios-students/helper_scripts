@@ -15,13 +15,16 @@ declare -A repos=(
 # Assume we're already in cf pages which lands us in docs folder
 
 # cleanup
-rm -rf helper-scripts/ NEP*/ contribute.md takedown.md typography.md ../node_modules .vitepress/dist || true 
+rm -rf helper-scripts/ contribute.md takedown.md typography.md ../node_modules .vitepress/dist || true 
 
 # Clone sources
 for repo_name in "${!repos[@]}"; do
   # Check if the current repo_name is in the SKIP_REPO_NAME variable
   if [[ "$SKIP_REPO_NAME" != *"$repo_name"* ]]; then
     echo "Cloning $repo_name..."
+    target_dir="${repo_name//_//}"
+    echo "Removing old directory: $target_dir..."
+    rm -rf "$target_dir"
     git clone ${repos[$repo_name]} --depth=1
   else
     echo "Skipping $repo_name because it's in SKIP_$repo_name mode"
