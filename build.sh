@@ -14,8 +14,12 @@ git clone https://github.com/nios-students/helper_scripts/ helper-scripts --dept
 #git clone https://github.com/examdawn/NEP2020_2024_BSc NEP2020/2024/BSc --depth=1 # Clone BSc
 
 # Copy Our course content to wiki folder
-git clone https://github.com/nios-students/docs -b contents temp && mv temp/{wiki,home} . && mv temp/index.md .
-
+if [[ $1 == "SKIP_DOCS"]]; then
+  echo "Skipping cloning docs, assuming it is at docs/temp folder"
+  mv temp/{wiki,home} . && mv temp/index.md .
+else
+  git clone https://github.com/nios-students/docs -b contents temp && mv temp/{wiki,home} . && mv temp/index.md .
+fi
 #git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BSc-Math --depth=1
 #git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BSc-Physics --depth=1
 
