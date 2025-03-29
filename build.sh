@@ -14,7 +14,7 @@ git clone https://github.com/nios-students/helper_scripts/ helper-scripts --dept
 #git clone https://github.com/examdawn/NEP2020_2024_BSc NEP2020/2024/BSc --depth=1 # Clone BSc
 
 # Copy Our course content to wiki folder
-if [[ $1 == "SKIP_DOCS"]]; then
+if [[ "$1" == "SKIP_DOCS" ]]; then
   echo "Skipping cloning docs, assuming it is at docs/temp folder"
   mv temp/{wiki,home} . && mv temp/index.md .
 else
