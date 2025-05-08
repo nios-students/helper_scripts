@@ -1,11 +1,11 @@
 /NEP2020/2023/BCA/4thsem/Python-Programming/lab/*
   Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Embedder-Policy: same-origin
 
 /NEP2020/2023/BCA/4thsem/Python-Programming/assignments/assignment-1
   Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Embedder-Policy: same-origin
 
 /assets/*
   Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Embedder-Policy: same-origin
