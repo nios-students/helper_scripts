@@ -1,11 +1,15 @@
 /NEP2020/2023/BCA/4thsem/Python-Programming/lab/*
   Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
 
 /NEP2020/2023/BCA/4thsem/Python-Programming/assignments/assignment-1
   Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
 
 /assets/*
   Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+/jupyterlite/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
