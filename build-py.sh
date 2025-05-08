@@ -12,7 +12,7 @@ python -m pip install -r requirements.txt --break-system-packages
 
 # Build it
 cp README.md content
-jupyter lite build --contents content --output-dir dist
+python -m jupyter lite build --contents content --output-dir dist
 
 
 # Move it to dist folder to upload
