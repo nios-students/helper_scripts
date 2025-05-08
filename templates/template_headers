@@ -1,8 +1,3 @@
-/*
-  Access-Control-Allow-Origin: https://jupyterlite.github.io
-  Cross-Origin-Opener-Policy: unsafe-none
-  Cross-Origin-Embedder-Policy: unsafe-none
-
 /NEP2020/2023/BCA/4thsem/Python-Programming/lab/*
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp

@@ -45,3 +45,6 @@ cd .. #assume we're starting in docs folder
 npm install || true
 npm run docs:build # Build, it will pop up in 
 cp docs/helper-scripts/templates/template_headers docs/.vitepress/dist/_headers || true # Copy headers, https://vitepress-python-editor.netlify.app/installation#_4-set-http-headers
+
+# Build JupyterLite
+bash build-py.sh
