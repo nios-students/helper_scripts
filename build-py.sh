@@ -17,4 +17,4 @@ python -m jupyter lite build --contents content --output-dir dist
 
 # Move it to dist folder to upload
 mkdir -p ../docs/.vitepress/dist/jupyterlite
-mv dist/* ../docs/.vitepress/dist/jupyterlite
+mv * ../docs/.vitepress/dist/jupyterlite
