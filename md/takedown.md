@@ -25,4 +25,4 @@ We will review all takedown requests and verify the ownership of the content. If
 
 If we find that the content infringes on your copyright, we will remove it from our platform. We will also make sure to keep a record of all correspondence and documentation related to the takedown request.
 
-You can do this through a git Pull Request, or a Github Issue to [the content repo](https://github.com/nios-students/docs) or email us [unofficiallnios[at]gmail.com](unofficiallnios@gmail.com)
+You can do this through a git Pull Request, or a Github Issue to [the content repo](https://github.com/nios-students/docs) or email us at unofficiallnios@gmail.com
