@@ -35,3 +35,7 @@ npm run docs:build # Build, it will pop up in
 
 # Cleanup
 rm -rf temp || true
+
+# Other websites
+rm -rf docs/.vitepress/dist/links
+git clone https://github.com/123-4sachi/Nios-Unofficial-LinkTree docs/.vitepress/dist/links
