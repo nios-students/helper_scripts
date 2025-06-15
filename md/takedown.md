@@ -25,4 +25,7 @@ We will review all takedown requests and verify the ownership of the content. If
 
 If we find that the content infringes on your copyright, we will remove it from our platform. We will also make sure to keep a record of all correspondence and documentation related to the takedown request.
 
-You can do this through a git Pull Request, or a Github Issue to [the content repo](https://github.com/examdawn/content)
+You can do this through a git Pull Request to the respective Content repo(they will be honored), or a Github Issue to [the takedown repo](https://github.com/examdawn/takedown-requests/issues/new/choose)
+
+> [!NOTE]
+> These requests will be honored fairly as long as appropriate information as stated above is provided
