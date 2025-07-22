@@ -42,4 +42,4 @@ git clone https://github.com/123-4sachi/Nios-Unofficial-LinkTree docs/.vitepress
 
 # custom donation page(testing for now)
 rm -rf docs/.vitepress/dist/donation
-git clone https://github.com/123-4sachi/NIOS-Unofficial-buy-us-chai-page.git docs/.vitepress/dist/Donation
+git clone https://github.com/123-4sachi/NIOS-Unofficial-buy-us-chai-page.git docs/.vitepress/dist/donation
