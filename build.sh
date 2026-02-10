@@ -1,50 +1,45 @@
 #!/usr/bin/bash
-set -e # Fail on even the smallest error
-
-# curl https://raw.githubusercontent.com/examdawn/helper_scripts/refs/heads/main/build.sh | bash
-
-
-declare -A repos=(
-  [NEP2020_2023_BCA]="https://github.com/examdawn/NEP2020_2023_BCA NEP2020/2023/BCA"
-  [NEP2020_2024_BCA]="https://github.com/examdawn/NEP2020_2024_BCA NEP2020/2024/BCA"
-  [NEP2020_2024_BSc]="https://github.com/examdawn/NEP2020_2024_BSc NEP2020/2024/BSc"
-)
-# Check if SKIP_REPO_NAME is set. If not, set it to an empty string so the script doesn't fail if it's unset.
-: "${SKIP_REPO_NAME:=""}"
-
+set -e 
+# curl https://raw.githubusercontent.com/nios-students/helper_scripts/refs/heads/main/build.sh | bash
 
 # Assume we're already in cf pages which lands us in docs folder
 
 # cleanup
-rm -rf helper-scripts/ contribute.md takedown.md typography.md ../node_modules .vitepress/dist || true 
+rm -rf helper-scripts/ wiki/ home/ contribute.md takedown.md typography.md ../node_modules .vitepress/dist || true 
 
 # Clone sources
-for repo_name in "${!repos[@]}"; do
-  # Check if the current repo_name is in the SKIP_REPO_NAME variable
-  if [[ "$SKIP_REPO_NAME" != *"$repo_name"* ]]; then
-    echo "Cloning $repo_name..."
-    target_dir="${repo_name//_//}"
-    echo "Removing old directory: $target_dir..."
-    rm -rf "$target_dir" || true
-    git clone ${repos[$repo_name]} --depth=1 || true
-  else
-    echo "Skipping $repo_name because it's in SKIP_$repo_name mode"
-  fi
-done
+git clone https://github.com/nios-students/helper_scripts/ helper-scripts --depth=1 || true # Scripts 
+#git clone https://github.com/examdawn/NEP2020_2023_BCA NEP2020/2023/BCA --depth=1 # Clone BCA
+#git clone https://github.com/examdawn/NEP2020_2024_BCA NEP2020/2024/BCA --depth=1 # Clone BCA
+#git clone https://github.com/examdawn/NEP2020_2024_BSc NEP2020/2024/BSc --depth=1 # Clone BSc
 
-
+# Copy Our course content to wiki folder
+if [[ "$1" == "SKIP_DOCS" ]]; then
+  echo "Skipping cloning docs, assuming it is at docs/temp folder"
+  mv temp/{wiki,home} . && mv temp/index.md . || true
+else
+  git clone https://github.com/nios-students/docs -b contents temp && mv temp/{wiki,home} . && mv temp/index.md . || true
+fi
 #git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BSc-Math --depth=1
 #git clone https://github.com/examdawn/NEP_2023_BCA NEP2020/2023/BSc-Physics --depth=1
 
-git clone https://github.com/examdawn/helper_scripts helper-scripts || true
-mv helper-scripts/md/*.md .  || true # Move the md files to current docs dir
 
-bash helper-scripts/gen-md.sh || true # Create all the folders
+mv helper-scripts/md/*.md . || true # Move the md files to current docs dir
+
+#bash helper-scripts/gen-md.sh # Create all the folders
 
 cd .. #assume we're starting in docs folder
 npm install || true
 npm run docs:build # Build, it will pop up in 
-cp docs/helper-scripts/templates/template_headers docs/.vitepress/dist/_headers || true # Copy headers, https://vitepress-python-editor.netlify.app/installation#_4-set-http-headers
+#cp docs/helper-scripts/templates/template_headers docs/.vitepress/dist/_headers # Copy headers, https://vitepress-python-editor.netlify.app/installation#_4-set-http-headers
 
-# Build JupyterLite
-bash docs/helper-scripts/build-py.sh
+# Cleanup
+rm -rf temp || true
+
+# Other websites
+rm -rf docs/.vitepress/dist/links
+git clone https://github.com/123-4sachi/Nios-Unofficial-LinkTree docs/.vitepress/dist/links
+
+# custom donation page(testing for now)
+rm -rf docs/.vitepress/dist/donation
+git clone https://github.com/123-4sachi/NIOS-Unofficial-buy-us-chai-page.git docs/.vitepress/dist/donation
