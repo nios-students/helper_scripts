@@ -8,7 +8,7 @@ set -e
 rm -rf helper-scripts/ wiki/ home/ contribute.md takedown.md typography.md ../node_modules .vitepress/dist || true 
 
 # Clone sources
-git clone https://github.com/nios-students/helper_scripts/ helper-scripts --depth=1 || true # Scripts 
+git clone -b fix --depth=1 https://github.com/nios-students/helper_scripts/ helper-scripts  || true # Scripts 
 #git clone https://github.com/examdawn/NEP2020_2023_BCA NEP2020/2023/BCA --depth=1 # Clone BCA
 #git clone https://github.com/examdawn/NEP2020_2024_BCA NEP2020/2024/BCA --depth=1 # Clone BCA
 #git clone https://github.com/examdawn/NEP2020_2024_BSc NEP2020/2024/BSc --depth=1 # Clone BSc
